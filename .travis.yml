@@ -1,0 +1,17 @@
+language: go
+
+services:
+  - docker
+
+go:
+  - tip
+
+sudo: false
+
+install: true
+
+before_script:
+  - go get github.com/karalabe/xgo
+
+script:
+  - xgo --targets=linux/arm-6 .
